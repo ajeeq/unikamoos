@@ -1,26 +1,33 @@
 // Import directives
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:latinize/latinize.dart';
+
+// Models
+import 'package:unikamoos/models/mandarin.dart';
 
 class Home extends ConsumerWidget{
   const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("UniKamoos"),
       ),
       body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Text(
-                  'HOME SCREEN :3',
-                ),
-              ],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/translate");
+              },
+              child: const Text('Mandarin'),
             ),
-          ),
+          ],
+        ),
+      ),
           
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,

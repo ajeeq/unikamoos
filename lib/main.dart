@@ -9,6 +9,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 // Screens
 import 'package:unikamoos/screens/home.dart';
+import 'package:unikamoos/screens/translate.dart';
 
 Future main() async {
   // Loading env file for accessing secured environment variables
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const Home(),
+        '/translate': (context) => const Translate(),
       },
     );
   }
